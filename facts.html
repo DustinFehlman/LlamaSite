@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you LLama?</title>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="css/default.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="css/facts.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 899px)" href="css/mobile/mobile-default.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 899px)" href="css/mobile/mobile-facts.css">
+    <script src="js/PictureBook.js"></script>
+    <script src="js/FactBook.js"></script>
+</head>
+<body>
+
+<div class="topNav">
+    <ul>
+        <li><a class="imageLinks" id="homeLink" href="index.html"></a></li>
+        <li><a class="imageLinks" id="aboutLink" href="about.html"></a></li>
+    </ul>
+</div>
+
+<div class="main" id="factsMain">
+    <div id="subMain">
+        <div id="picViewer">
+
+            <img src="img/llamas/llama1.jpg" id="llamaPics">
+
+        </div>
+        <p id="llamaFacts">Llamas are large animals. They can be 6 feet tall (at the head) and reach between 280 and 450
+            pounds of weight.</p>
+
+    </div>
+</div>
+
+<div class="bottomNav" id="factsBottomNav">
+    <input class="button" onclick="grabNewLlamaStuff()" id="factButton" type="button"
+           value="Click here for more Llama facts!">
+</div>
+</body>
+<script>
+    var llamaFactBook = new FactBook();
+    var llamaPicBook = new PictureBook();
+    llamaFactBook.facts = [
+        "Llamas are large animals. They can be 6 feet tall (at the head) and reach between 280 and 450 pounds of weight.",
+        "Llamas bodies are covered with wool which can be black, gray, white or brown, with variety of patterns.",
+        "Llamas can be divided in two groups according to the length of their fur: short coated (called Ccara) and the medium coated (called Curaca).",
+        "Llamas has elongated face, large nostrils and long ears that are curved inwardly. Llama's ears are shaped like bananas.",
+        "Llamas has excellent sense of sight, smell and hearing, which are used for detection of potential danger.",
+        "Llamas have inherited fear of coyote, mountain lions and other dog-like animals. Some llamas are used as \"guards\" of the sheep because they quickly alert and protect the herd when they spot a predator.",
+        "Llamas are very social animals. They live in groups composed of up to 20 animals.",
+        "Llamas are known as animals that spit when provoked or threatened. They can spit at humans also, but they usually spit at each other to solve misunderstandings in the group.",
+        "Llamas are herbivores (eat only plants). They eat grass and ferns mainly. Llama on the farm may eat 6 pounds of hay per day.",
+        "Llamas are not hoofed animals. It has two toenails on each foot and leathery pad underneath.",
+        "Llamas are very intelligent, but stubborn animals. When the load on its back is too heavy, llama will refuse to carry it until some of the load is removed.",
+        "400 pounds heavy llama can easily carry 100 pounds heavy load for 10 to 12 miles.",
+        "Llamas do not have specific time of mating. Male usually chases female for up to 10 minutes until she is finally ready to mate.",
+        "Pregnancy in llamas lasts 11 ½ months and ends with a single baby. Female will give birth to a baby in the morning hours and young llama will be able to run with the rest of the herd by the evening.",
+        "Lifespan of llamas is between 20 and 30 years."
+    ];
+    llamaPicBook.picLinks = [
+        "img/llamas/baby1.jpg",
+        "img/llamas/baby2.jpg",
+        "img/llamas/baby3.jpg",
+        "img/llamas/llama1.jpg",
+        "img/llamas/llama2.jpg",
+        "img/llamas/llama3.jpg",
+        "img/llamas/llama4.jpg",
+        "img/llamas/llama5.jpg"
+    ];
+
+    function grabNewLlamaStuff() {
+        document.getElementById("llamaPics").src = llamaPicBook.grabRandomPic();
+        document.getElementById("llamaFacts").innerHTML = llamaFactBook.grabRandomFact();
+    }
+</script>
+</html>

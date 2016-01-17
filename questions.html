@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you LLama?</title>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="css/default.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="css/questions.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 899px)" href="css/mobile/mobile-default.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 899px)" href="css/mobile/mobile-questions.css">
+    <script src="js/User.js"></script>
+</head>
+<body>
+<form id="userInput">
+<div class="topNav">
+    <ul>
+        <li><a class="imageLinks" id="homeLink" href="index.html"></a></li>
+        <li><a class="imageLinks" id="aboutLink" href="about.html"></a></li>
+    </ul>
+</div>
+
+<div class="main" id="questionPageMain">
+    <div id="questionPageSubMain">
+        <h1>Let's look at some Llama trivia!</h1>
+
+        <h2>Please answer the questions below:</h2>
+
+        <div class="left">
+
+                <h3>What is first your name? <input id="firstName" type="text" name="name" maxlength="20"></h3>
+
+                <h3> How old are you? <input id="age" type="text" name="age" maxlength="2" ></h3>
+
+                <h3>How tall are you? Feet:<input id="heightFeet" type="text" name="name" maxlength="1" > Inches:<input
+                        id="heightInches" type="text" name="name" maxlength="2" ></h3>
+            <div id = "rightNameError">
+                <p class="errorText" id="blankNameError"></p>
+            </div>
+            <div id = "rightAgeError">
+                <p class="errorText" id="blankAgeError"></p>
+            </div>
+            <div id = "rightHeightError">
+                <p class="errorText" id="blankHeightError"></p>
+            </div>
+
+        </div>
+        <img id="runningLlama" src="img/brownLlama.gif">
+    </div>
+</div>
+
+
+<div class="bottomNav" id="questionsBottomNav">
+    <input class="button" id="submitButton" type="button" value="Submit" onclick= grabDataAndStore();>
+</div>
+</form>
+</body>
+<script>
+
+    var secondMainDiv = document.getElementById("questionPageSubMain");
+    var url = "results.html";
+
+    function grabDataAndStore(){
+        var sessionUser = new User();
+        var nameGood = "false";
+        var ageGood = "false";
+        var heightGood = "false";
+        sessionUser.name = document.getElementById('firstName').value;
+        sessionUser.age = document.getElementById('age').value;
+        sessionUser.heightFeet = document.getElementById('heightFeet').value;
+        sessionUser.heightInches = document.getElementById('heightInches').value;
+
+        if(sessionUser.name == ""){
+            document.getElementById("blankNameError").innerHTML = "Please fill out your name!";
+        }
+        else if(!/^[a-zA-Z]+$/.test(sessionUser.name)){
+            document.getElementById("blankNameError").innerHTML = "Please only use letters!";
+        }
+        else{
+            document.getElementById("blankNameError").innerHTML = "";
+            nameGood = "true";
+        }
+        if(sessionUser.age == ""){
+            document.getElementById("blankAgeError").innerHTML = "Please provide your age!";
+        }
+        else if(!/^[0-9]*$/.test(sessionUser.age)){
+            document.getElementById("blankAgeError").innerHTML = "Please only use numbers!";
+        }
+        else{
+            document.getElementById("blankAgeError").innerHTML = "";
+            ageGood = "true";
+        }
+        if((!/^[0-9]*$/.test(sessionUser.heightFeet)) || (!/^[0-9]*$/.test(sessionUser.heightInches))){
+            document.getElementById("blankHeightError").innerHTML = "Please only use numbers!";
+        }
+        else if(sessionUser.heightFeet == "" || sessionUser.heightInches == ""){
+            document.getElementById("blankHeightError").innerHTML = "Please provide BOTH your feet and inches!";
+        }
+        else{
+            document.getElementById("blankHeightError").innerHTML = "";
+            heightGood = "true";
+        }
+
+        if(nameGood == "true" && ageGood == "true" && heightGood == "true"){
+            localStorage.setItem("sessionUser", JSON.stringify(sessionUser));
+            window.location.href="results.html";
+        }
+    }
+</script>
+</html>

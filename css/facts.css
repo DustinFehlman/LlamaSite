@@ -1,0 +1,66 @@
+#subMain {
+    width: 750px;
+    height: 460px;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+
+}
+
+#picViewer{
+
+    width: 750px;
+    height: 320px;
+
+
+}
+
+#llamaPics{
+    max-height: 320px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+
+}
+
+#llamaFacts{
+    font-family: "Comic Sans MS", chalkboard, ChalkboardSE-Regular,  Helvetica, sans-serif;
+    text-align: center;
+    font-size: larger;
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}

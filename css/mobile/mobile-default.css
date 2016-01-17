@@ -1,0 +1,60 @@
+body {
+    background-image: url(../../img/tanBackground.jpg);
+}
+
+.topNav {
+    margin: auto;
+    text-align: center;
+
+}
+
+.main{
+    height: auto;
+    width: auto;
+    font-family: "Comic Sans MS", chalkboard, ChalkboardSE-Regular,  Helvetica, sans-serif;
+    text-align: center;
+
+}
+
+#homeLink {
+    content: url(../../img/peruHome.png);
+    width: 220px;
+    height: 50px;
+}
+
+#aboutLink {
+    content: url(../../img/peruAbout.png);
+    width: 220px;
+    height: 50px;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline;
+
+
+}
+.button {
+    border-radius: 8px;
+    background-color: limegreen;
+    font-family: "Comic Sans MS", chalkboard, ChalkboardSE-Regular,  Helvetica, sans-serif;
+    cursor: pointer;
+    margin: auto;
+    padding: 15px 32px;
+    border: none;
+    color: whitesmoke;
+    font-size: large;
+    outline: none;
+    transition: padding 0s;
+    width: 100%;
+
+}
+.errorText {
+    color: red;
+}
+
+

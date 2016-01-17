@@ -1,0 +1,55 @@
+#aboutSubMain{
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 750px;
+    height: 460px;
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+
+}
+
+#subMainLeft{
+    border: solid transparent;
+    height: 455px;
+    width: 365px;
+}
+
+#subMainRight{
+    position: absolute;
+    border: solid transparent;
+    height: 455px;
+    width: 365px;
+    left: 375px;
+    top: 0px;overflow: scroll;
+    font-family: "Comic Sans MS", chalkboard, ChalkboardSE-Regular,  Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+#me{
+    position: absolute;
+    top: 40px;
+    max-width: 365px;
+}
+
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+

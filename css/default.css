@@ -1,0 +1,123 @@
+
+body {
+    background-image: url(../img/tanBackground.jpg);
+}
+
+p {
+    color: white;
+}
+
+.topNav {
+    position: relative;
+    width: 220px;
+    height: 150px;
+    margin: 0px;
+    top: 100px;
+    left: -30px
+}
+
+#homeLink {
+    content: url(../img/peruHome.png);
+    width: 220px;
+    height: 50px;
+}
+
+#homeLink:hover {
+    content: url(../img/peruHome.png);
+    width: 240px;
+    height: 60px;
+
+}
+
+#aboutLink {
+    content: url(../img/peruAbout.png);
+    width: 220px;
+    height: 50px;
+}
+
+#aboutLink:hover {
+    content: url(../img/peruAbout.png);
+    width: 240px;
+    height: 60px;
+
+}
+
+.main {
+    position: relative;
+    border: solid;
+    border-color: black;
+    width: 750px;
+    height: 460px;
+    top: -130px;
+    box-shadow: 10px 10px 5px #888888;
+    margin-left: 275px;
+    background-image: url(../img/machuPicchu.jpg);
+    background-size: 750px 460px;
+    background-repeat: no-repeat;
+}
+
+.bottomNav {
+    position: relative;
+    bottom: 100px;
+    left: 475px;
+    right: 0;
+    top: -100px;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+
+}
+
+.button {
+    border-radius: 8px;
+    background-color: limegreen;
+    font-family: "Comic Sans MS", chalkboard, ChalkboardSE-Regular,  Helvetica, sans-serif;
+    cursor: pointer;
+    margin: auto;
+    padding: 15px 32px;
+    border: none;
+    color: whitesmoke;
+    font-size: large;
+    outline: none;
+    transition: padding 0s;
+
+}
+
+.button:hover {
+    background-color: lightgreen;
+    color: black;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+input[type="text"]{
+    border-radius: 10px;
+    border: solid;
+    width: 50px;
+    height: 50px;
+    font-family: "Comic Sans MS", chalkboard, ChalkboardSE-Regular,  Helvetica, sans-serif;
+    font-size: large;
+
+}
+input:focus{
+    outline: none;
+}
+
+
+
+
+

@@ -1,0 +1,33 @@
+#mainLlama{
+    height: auto;
+    width: 100%;
+    content: url(../../img/mobile/llamaBubble.png);
+    animation: fadeIn 1s;
+}
+
+#indexBottomNav{
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}

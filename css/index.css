@@ -1,0 +1,159 @@
+#indexTopNav {
+    -webkit-animation-name: slideRight;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation: slideRight 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    left: -500px;
+}
+@-webkit-keyframes slideRight {
+    0% {
+        left: -500px;
+    }
+    50% {
+        left: 10px;
+
+    }
+    100% {
+        left: -30px;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        left: -500px;
+    }
+    50% {
+        left: 10px;
+
+    }
+    100% {
+        left: -30px;
+    }
+}
+
+#indexPageMain {
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation: fadeIn 1s;
+    background-image: url(../img/machuPicchu.jpg);
+    background-size: 750px 460px;
+    background-repeat: no-repeat;
+
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+#mainLlama {
+
+    height: 100%;
+    width: auto;
+    position: relative;
+    bottom: 25px;
+    content: url(../img/llama.png);
+}
+
+#sBubble {
+    -webkit-animation-name: quickAppear;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation: quickAppear 1s;
+    animation-delay: 2s;
+    visibility: hidden;
+    padding-bottom: 30%;
+    animation-fill-mode: forwards;
+    width: auto;
+    position: relative;
+    content: url(../img/speechBubble.png);
+}
+
+@-webkit-keyframes quickAppear {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+@keyframes quickAppear {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+#indexBottomNav {
+    text-align: center;
+    width: 300px;
+    height: 60px;
+
+}
+
+#yesButton {
+    -webkit-animation-name: grandButton;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation: grandButton 1s;
+    animation-delay: 2.5s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+    padding: 15px 32px;
+
+}
+@-webkit-keyframes grandButton {
+    0% {
+        visibility: hidden;
+        padding: 0px 0px;
+
+    }
+    50% {
+        visibility: visible;
+        padding: 20px 38px;
+
+    }
+    100% {
+        padding: 15px 32px;
+        visibility: visible;
+
+    }
+}
+
+@keyframes grandButton {
+    0% {
+        visibility: hidden;
+        padding: 0px 0px;
+
+    }
+    50% {
+        visibility: visible;
+        padding: 20px 38px;
+
+    }
+    100% {
+        padding: 15px 32px;
+        visibility: visible;
+
+    }
+}
+
+
+
+

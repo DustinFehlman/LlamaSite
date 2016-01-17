@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you LLama?</title>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="css/default.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="css/results.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 899px)" href="css/mobile/mobile-default.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 899px)" href="css/mobile/mobile-results.css">
+    <script src="js/DataCompare.js"></script>
+</head>
+<body>
+
+<div class="topNav">
+    <ul>
+        <li><a class="imageLinks" id="homeLink" href="index.html"></a></li>
+        <li><a class="imageLinks" id="aboutLink" href="about.html"></a></li>
+    </ul>
+</div>
+
+<div class="main" id="thirdPageMain">
+    <div id="resultsSubMain">
+        <h1 class="results"><span id="userName"></span>, you are <span id="ageInfo"></span> the maximum lifespan of a
+            Llama. You are <span id="heightInfo"></span> the tallest LLama.</h1>
+
+        <div class="subMain" id="resultsDiv">
+            <p class="labels" id="llamaHeight">5'11"</p>
+            <img id="llamaSil" src="img/llamaSilhouette.png">
+
+            <p class="labels" id="llamaLabel">Llama</p>
+
+            <p class="labels" id="userHeight">test</p>
+            <img onload="setHeight(this, heightInInches);" id="personSil" src="img/person.png">
+
+            <p class="labels" id="userLabel"></p>
+        </div>
+    </div>
+
+</div>
+
+<div class="bottomNav">
+    <input class="button" id="factButton" type="button" value="Click here for more Llama facts!"
+           onclick= "window.location.href='facts.html'">
+</div>
+</body>
+<script>
+    var tempJSON = localStorage.getItem("sessionUser");
+    var user = JSON.parse(tempJSON);
+    var heightInInches = DataCompare.feetToInches(parseInt(user.heightFeet), parseInt(user.heightInches));
+    var heightDifference = DataCompare.heightDifference(heightInInches);
+    var ageDifference = DataCompare.ageDifference(parseInt(user.age));
+    console.log(user.age);
+    document.getElementById("userLabel").innerHTML = user.name;
+    document.getElementById("userName").innerHTML = user.name;
+    document.getElementById("userHeight").innerHTML = user.heightFeet + "'" + user.heightInches + "\"";
+    if (ageDifference < 0) {
+        document.getElementById("ageInfo").innerHTML = ageDifference * -1 + " years younger than";
+    }
+    else if (ageDifference == 0) {
+        document.getElementById("ageInfo").innerHTML = "the same age as";
+    }
+    else {
+        document.getElementById("ageInfo").innerHTML = ageDifference + " years older than";
+    }
+
+    if (heightDifference < 0) {
+        document.getElementById("heightInfo").innerHTML = heightDifference * -1 + " inches shorter than";
+    }
+    else if (heightDifference == 0) {
+        document.getElementById("heightInfo").innerHTML = "the same height as";
+    }
+    else {
+        document.getElementById("heightInfo").innerHTML = heightDifference + " inches taller than";
+    }
+    function setHeight(elem, userInches) {
+        var pixelHeight = Math.round(userInches * 2.82);
+        var labelTop;
+        var personTop;
+        elem.style.height = pixelHeight + "px";
+        labelTop = 400 - pixelHeight;
+        personTop = 435 - pixelHeight;
+        console.log(labelTop);
+        console.log(personTop);
+        document.getElementById("userHeight").style.top = Math.round(labelTop) + "px";
+        document.getElementById("personSil").style.top = Math.round(personTop) + "px";
+
+    }
+
+
+
+</script>
+</html>

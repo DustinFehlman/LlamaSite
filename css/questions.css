@@ -1,0 +1,143 @@
+.left {
+    position: absolute;
+    top: 120px;
+    text-align: left;
+    padding-left: 100px;
+
+}
+
+#questionPageSubMain {
+    width: 750px;
+    height: 460px;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation: fadeIn 1s;
+    font-family: "Comic Sans MS", chalkboard, ChalkboardSE-Regular,  Helvetica, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#runningLlama {
+    position: relative;
+    width: 20%;
+    height: 20%;
+    top: 225px;
+    right: 27px;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#firstName {
+    width: 200px;
+}
+
+#questionsBottomNav {
+    text-align: center;
+    width: 300px;
+    height: 60px;
+
+}
+
+#submitButton {
+    -webkit-animation-name: grandButton;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2.5s;
+    animation: grandButton 1s;
+    animation-delay: 2.5s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+    padding: 15px 32px;
+
+}
+
+@-webkit-keyframes grandButton {
+    0% {
+        visibility: hidden;
+        padding: 0px 0px;
+
+    }
+    50% {
+        visibility: visible;
+        padding: 20px 38px;
+
+    }
+    100% {
+        padding: 15px 32px;
+        visibility: visible;
+
+    }
+}
+
+
+@keyframes grandButton {
+    0% {
+        visibility: hidden;
+        padding: 0px 0px;
+
+    }
+    50% {
+        visibility: visible;
+        padding: 20px 38px;
+
+    }
+    100% {
+        padding: 15px 32px;
+        visibility: visible;
+
+    }
+}
+
+
+#rightNameError {
+    position: relative;
+    background-color: transparent;
+    float: right;
+    left: 170px;
+    top: -240px;
+    width: 150px;
+}
+
+#rightAgeError {
+    position: relative;
+    background-color: transparent;
+    float: right;
+    width: 150px;
+    top: -160px;
+    left: 100px;
+
+}
+
+#rightHeightError {
+    position: relative;
+    background-color: transparent;
+    width: 150px;
+    top: -75px;
+    left: 440px;
+    float: right;
+
+}
+
+.errorText {
+    color: red;
+}
+
+
