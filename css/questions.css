@@ -50,12 +50,6 @@
     width: 200px;
 }
 
-#questionsBottomNav {
-    text-align: center;
-    width: 300px;
-    height: 60px;
-
-}
 
 #submitButton {
     -webkit-animation-name: grandButton;
@@ -65,46 +59,49 @@
     animation-delay: 2.5s;
     visibility: hidden;
     animation-fill-mode: forwards;
-    padding: 15px 32px;
 
 }
 
 @-webkit-keyframes grandButton {
     0% {
         visibility: hidden;
-        padding: 0px 0px;
+        height: 0px;
+        width: 0px;
 
     }
     50% {
-        visibility: visible;
-        padding: 20px 38px;
+        width: 120px;
+        height: 75px;
 
     }
     100% {
-        padding: 15px 32px;
+        height: 50px;
+        width: 100px;
         visibility: visible;
+
 
     }
 }
-
 
 @keyframes grandButton {
     0% {
         visibility: hidden;
-        padding: 0px 0px;
+        height: 0px;
+        width: 0px;
 
     }
     50% {
-        visibility: visible;
-        padding: 20px 38px;
+        width: 120px;
+        height: 75px;
 
     }
     100% {
-        padding: 15px 32px;
+        height: 50px;
+        width: 100px;
         visibility: visible;
-
     }
 }
+
 
 
 #rightNameError {

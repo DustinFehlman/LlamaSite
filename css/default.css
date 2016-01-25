@@ -3,6 +3,15 @@ body {
     background-image: url(../img/tanBackground.jpg);
 }
 
+.wrapper{
+    height: 1000px;
+    width: 1400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
 p {
     color: white;
 }
@@ -13,7 +22,7 @@ p {
     height: 150px;
     margin: 0px;
     top: 100px;
-    left: -30px
+    left: 10px;
 }
 
 #homeLink {
@@ -44,42 +53,47 @@ p {
 
 .main {
     position: relative;
-    border: solid;
-    border-color: black;
+    border: solid black;
     width: 750px;
     height: 460px;
-    top: -130px;
+    top: -150px;
     box-shadow: 10px 10px 5px #888888;
-    margin-left: 275px;
     background-image: url(../img/machuPicchu.jpg);
     background-size: 750px 460px;
     background-repeat: no-repeat;
+    left: 0px;
+    right: 0px;
+    margin: auto;
 }
 
 .bottomNav {
     position: relative;
     bottom: 100px;
-    left: 475px;
+    left: 0;
     right: 0;
-    top: -100px;
-    width: 100px;
-    height: 100px;
-    margin: 0;
+    width: auto;
+    height: auto
+    margin: auto;
+    top: -130px;
+    text-align: center;
 
 }
 
 .button {
+    position: relative;
     border-radius: 8px;
     background-color: limegreen;
     font-family: "Comic Sans MS", chalkboard, ChalkboardSE-Regular,  Helvetica, sans-serif;
     cursor: pointer;
-    margin: auto;
-    padding: 15px 32px;
     border: none;
     color: whitesmoke;
     font-size: large;
     outline: none;
-    transition: padding 0s;
+    height: 70px;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
 
 }
 

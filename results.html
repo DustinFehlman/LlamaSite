@@ -11,37 +11,39 @@
     <script src="js/DataCompare.js"></script>
 </head>
 <body>
-
-<div class="topNav">
-    <ul>
-        <li><a class="imageLinks" id="homeLink" href="index.html"></a></li>
-        <li><a class="imageLinks" id="aboutLink" href="about.html"></a></li>
-    </ul>
-</div>
-
-<div class="main" id="thirdPageMain">
-    <div id="resultsSubMain">
-        <h1 class="results"><span id="userName"></span>, you are <span id="ageInfo"></span> the maximum lifespan of a
-            Llama. You are <span id="heightInfo"></span> the tallest LLama.</h1>
-
-        <div class="subMain" id="resultsDiv">
-            <p class="labels" id="llamaHeight">5'11"</p>
-            <img id="llamaSil" src="img/llamaSilhouette.png">
-
-            <p class="labels" id="llamaLabel">Llama</p>
-
-            <p class="labels" id="userHeight">test</p>
-            <img onload="setHeight(this, heightInInches);" id="personSil" src="img/person.png">
-
-            <p class="labels" id="userLabel"></p>
-        </div>
+<div class="wrapper">
+    <div class="topNav">
+        <ul>
+            <li><a class="imageLinks" id="homeLink" href="index.html"></a></li>
+            <li><a class="imageLinks" id="aboutLink" href="about.html"></a></li>
+        </ul>
     </div>
 
-</div>
+    <div class="main" id="thirdPageMain">
+        <div id="resultsSubMain">
+            <h1 class="results"><span id="userName"></span>, you are <span id="ageInfo"></span> the maximum lifespan of
+                a
+                Llama. You are <span id="heightInfo"></span> the tallest LLama.</h1>
 
-<div class="bottomNav">
-    <input class="button" id="factButton" type="button" value="Click here for more Llama facts!"
-           onclick= "window.location.href='facts.html'">
+            <div class="subMain" id="resultsDiv">
+                <p class="labels" id="llamaHeight">5'11"</p>
+                <img id="llamaSil" src="img/llamaSilhouette.png">
+
+                <p class="labels" id="llamaLabel">Llama</p>
+
+                <p class="labels" id="userHeight">test</p>
+                <img onload="setHeight(this, heightInInches);" id="personSil" src="img/person.png">
+
+                <p class="labels" id="userLabel"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottomNav">
+        <input class="button" id="factButton" type="button" value="Click here for more Llama facts!"
+               onclick="window.location.href='facts.html'">
+    </div>
 </div>
 </body>
 <script>
@@ -86,7 +88,6 @@
         document.getElementById("personSil").style.top = Math.round(personTop) + "px";
 
     }
-
 
 
 </script>

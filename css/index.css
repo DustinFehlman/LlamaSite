@@ -5,18 +5,20 @@
     animation: slideRight 1s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-    left: -500px;
+    left: -100%;
+
 }
+
 @-webkit-keyframes slideRight {
     0% {
-        left: -500px;
+        left: -100%;
     }
     50% {
-        left: 10px;
+        left: 30px;
 
     }
     100% {
-        left: -30px;
+        left: 10px;
     }
 }
 
@@ -25,11 +27,11 @@
         left: -500px;
     }
     50% {
-        left: 10px;
+        left: 30px;
 
     }
     100% {
-        left: -30px;
+        left: 10px;
     }
 }
 
@@ -42,6 +44,7 @@
     background-repeat: no-repeat;
 
 }
+
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
@@ -50,6 +53,7 @@
         opacity: 100;
     }
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -100,13 +104,6 @@
     }
 }
 
-#indexBottomNav {
-    text-align: center;
-    width: 300px;
-    height: 60px;
-
-}
-
 #yesButton {
     -webkit-animation-name: grandButton;
     -webkit-animation-duration: 1s;
@@ -115,22 +112,25 @@
     animation-delay: 2.5s;
     visibility: hidden;
     animation-fill-mode: forwards;
-    padding: 15px 32px;
+    width: 100px;
 
 }
+
 @-webkit-keyframes grandButton {
     0% {
         visibility: hidden;
-        padding: 0px 0px;
+        height: 0px;
+        width: 0px;
 
     }
     50% {
-        visibility: visible;
-        padding: 20px 38px;
+        width: 120px;
+        height: 75px;
 
     }
     100% {
-        padding: 15px 32px;
+        height: 50px;
+        width: 100px;
         visibility: visible;
 
     }
@@ -139,21 +139,21 @@
 @keyframes grandButton {
     0% {
         visibility: hidden;
-        padding: 0px 0px;
+        height: 0px;
+        width: 0px;
 
     }
     50% {
-        visibility: visible;
-        padding: 20px 38px;
+        width: 120px;
+        height: 75px;
 
     }
     100% {
-        padding: 15px 32px;
+        height: 50px;
+        width: 100px;
         visibility: visible;
-
     }
 }
-
 
 
 
