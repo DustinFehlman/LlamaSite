@@ -25,7 +25,9 @@
     width: 20%;
     height: 20%;
     top: 225px;
-    right: 27px;
+    right:0;
+    left: 0;
+    margin: auto;
 }
 
 @-webkit-keyframes fadeIn {
